@@ -20,15 +20,13 @@ let precio;
 let unidades;
 let inflamable;
 let marca;
+let seguir = "s";
 let prom;
 let contalc = 0;
 let contiac = 0;
 let contquat = 0;
-let cont = 0;
-let acumAlcohol = 0;
-let acumIac = 0;
 
-while(cont <3)
+do{
 	producto = prompt("Ingrese el producto(ALCOHOL, IAC o  QUAT").toUpperCase();
 	while(producto != "ALCOHOL" && producto != "IAC" && producto != "QUAT"){
 		producto = prompt("Dato no válido. Ingrese el producto(ALCOHOL, IAC o  QUAT ").toUpperCase();
@@ -53,23 +51,16 @@ while(cont <3)
 
 
 	if(producto == "ALCOHOL"){
-		acumAlcohol++;
 		contalc++;
 	}
+	else if(producto == "IAC"){
+		contiac++;
+	}
+	else{ 
+		contquat++;
+	}
 
-
-	if(acumAlcohol > acumIac && acumAlcohol > acumQuat )
-		{
-			promedioAlcohol = acuAlcohol / contAlcohol;
-		}
-		else if (acumIac > acumAlcohol && acumIac > acumQuat)
-		{
-			promedioIac = acumIac / contIac;
-		}
-		else
-		{
-			promedioQuat = acumQuat / contQuat;
-		} 
+	prom = 
 
 
 
@@ -80,10 +71,9 @@ while(cont <3)
 
 
 
+	seguir = prompt("Desea seguir ingresando productos?  s/n");
 
-
-
-
+}while(seguir == "s" )
 
 
 
